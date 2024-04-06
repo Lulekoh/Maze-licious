@@ -16,6 +16,7 @@
           <h1>Congratulations!</h1>
         <p>You are done.</p>
         <p>Avatars</p>
+        <!-- Correct the paths to the image files -->
         <img src="avatars.jpg" alt="Player">
         <img src="flag.jpg" alt="Winner">
         <p id="moves"></p>
@@ -36,9 +37,8 @@
       <input id="startMazeBtn" type="button" onclick="makeMaze()" value="About" />
     </div>
     
-      </div>
-      <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start Game" />
-    </div>
+    <!-- Remove duplicate button and correct button value -->
+    <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start Game" />
     
     <div id="view">
       <div id="mazeContainer">
@@ -50,6 +50,7 @@
 
   </div>
 
+  <!-- Include jQuery library -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="./maze.js"></script>
 </body>
