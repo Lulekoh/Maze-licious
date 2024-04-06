@@ -10,7 +10,7 @@ html, body {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #fff;
+    background-color: #def;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -33,7 +33,7 @@ html, body {
 }
 input, select {
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.30);
+    background-color: rgba(40, 0, 0, 0.30);
     height: 45px;
     width: 150px;
     padding: 10px;
@@ -47,10 +47,10 @@ input, select {
     appearance: none;
 }
 input:hover, select:hover {
-	background-color: rgba(0, 0, 0, 0.70);
+	background-color: rgba(20, 10, 30, 0.70);
 }
 input:active, select:active {
-	background-color: black;
+	background-color: blue;
 }
 input:focus, select:focus {
 	outline: none;
@@ -76,7 +76,7 @@ input:focus, select:focus {
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.30);
+    background-color: rgba(10, 0, 0, 0.30);
     z-index: 1;
 }
 #Message-Container #message {
