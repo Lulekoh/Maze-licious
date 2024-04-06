@@ -15,6 +15,8 @@
       <div id="message">
           <h1>Congratulations!</h1>
         <p>You are done.</p>
+        <p>Avatars</p>
+        <img src="avatars.jpg" alt="Player">
         <p id="moves"></p>
         <input id="okBtn" type="button" onclick="toggleVisibility('Message-Container')" value="Cool!" />
       </div>
@@ -30,7 +32,7 @@
           <option value="38">Extreme</option>
         </select>
       </div>
-      <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start" />
+      <input id="startMazeBtn" type="button" onclick="makeMaze()" value="About" />
     </div>
 
     <div id="view">
@@ -39,12 +41,12 @@
       </div>
     </div>
 
-    <p id="instructions">Use arrow keys to move the key to the house!</p>
+    <p id="instructions">Use arrow keys to move the avatars to the flag!</p>
 
   </div>
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="./script.js"></script>
+  <script src="./maze.js"></script>
 </body>
 </html>
 
