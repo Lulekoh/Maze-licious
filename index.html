@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maze</title>
-  <link rel="stylesheet" href="maze.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
@@ -13,14 +13,10 @@
 
     <div id="Message-Container">
       <div id="message">
-          <h1>Congratulations!</h1>
+        <h1>Congratulations!</h1>
         <p>You are done.</p>
-        <p>Avatars</p>
-        <!-- Correct the paths to the image files -->
-        <img src="https://github.com/Lulekoh/Maze-licious/blob/master/flag.jpg" alt="Player">
-        <img src="https://github.com/Lulekoh/Maze-licious/blob/master/avatars.jpg" alt="Winner">
         <p id="moves"></p>
-        <input id="okBtn" type="button" onclick="toggleVisibility('Message-Container')" value="Cool!" />
+        <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Cool!" />
       </div>
     </div>
 
@@ -28,18 +24,14 @@
     <div id="menu">
       <div class="custom-select">
         <select id="diffSelect">
-          <option value="10">Easy</option>
-          <option value="15">Medium</option>
-          <option value="25">Hard</option>
-          <option value="38">Extreme</option>
-        </select>
+                  <option value="10">Easy</option>
+                  <option value="15">Medium</option>
+                  <option value="25">Hard</option>
+                  <option value="38">Extreme</option>                                      
+              </select>
       </div>
-      <input id="AboutBtn" type="button" onclick="makeMaze()" value="About" />
+      <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start" />
     </div>
-    
-    </div>
-   <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start Game" />
-   </div>
 
     <div id="view">
       <div id="mazeContainer">
@@ -47,13 +39,13 @@
       </div>
     </div>
 
-    <p id="instructions">Use arrow keys to move the avatars to the flag!</p>
+    <p id="instructions">Use arrow keys to move the key to the house!</p>
 
   </div>
 
-  <!-- Include jQuery library -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+  
   <script src="./maze.js"></script>
 </body>
 </html>
-
