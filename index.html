@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maze</title>
-  <link rel="stylesheet" href="maze.css">
+  <link rel="stylesheet" href="./maze.css">
 </head>
 <body>
 
@@ -16,9 +16,6 @@
         <h1>Congratulations!</h1>
         <p>You are done.</p>
         <p id="moves"></p>
-	<p>Avatars</p>
-	<img src="avatars.jpg" alt="player">
-	<img src="flag.jpg" alt="won">
         <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Cool!" />
       </div>
     </div>
@@ -33,7 +30,6 @@
                   <option value="38">Extreme</option>                                      
               </select>
       </div>
-      <input id="startMazeBtn" type="button" onclick="makeMaze()" value="About" />
       <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start" />
     </div>
 
@@ -43,9 +39,12 @@
       </div>
     </div>
 
-    <p id="instructions">Use arrow keys to move the avatar to the flag!</p>
+    <p id="instructions">Use arrow keys to move the avatars to the flag!</p>
 
   </div>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
   
   <script src="./maze.js"></script>
 </body>
