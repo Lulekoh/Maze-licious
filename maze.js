@@ -526,7 +526,7 @@ window.onload = function() {
   };
   sprite = new Image();
   sprite.src =
-    "./avatars.png" +
+    "./runner.png" +
     "?" +
     new Date().getTime();
   sprite.setAttribute("crossOrigin", " ");
