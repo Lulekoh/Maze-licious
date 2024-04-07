@@ -28,8 +28,8 @@ html, body {
 #mazeContainer #mazeCanvas {
     margin: 0;
     display: block;
-    border: solid 4px green;
-    height: 800px;
+    border: solid 2px green;
+    height: 400px;
 }
 input, select {
     cursor: pointer;
@@ -50,7 +50,7 @@ input:hover, select:hover {
 	background-color: rgba(0, 0, 0, 0.70);
 }
 input:active, select:active {
-	background-color: black;
+	background-color: orange;
 }
 input:focus, select:focus {
 	outline: none;
