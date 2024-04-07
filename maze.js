@@ -500,7 +500,60 @@ var maze, draw, player;
 var cellSize;
 var difficulty;
 // sprite.src = 'media/sprite.png';
+// Create a style element to remove default margin and padding
+const style = document.createElement('style');
+style.textContent = 'html, body, canvas { margin: 0px; padding: 0px; }';
+document.head.appendChild(style);
 
+// Create a canvas element and set its width and height to 100% of the viewport
+const canvas = document.createElement('canvas');
+canvas.id = 'screen';
+canvas.style.width = '100%';
+canvas.style.height = '100%';
+document.body.appendChild(canvas);
+
+// Get the 2D drawing context of the canvas
+const context = canvas.getContext('2d');
+
+// FPS
+const FPS = 60;
+const cycleDelay = Math.floor(1000 / FPS);
+let oldCycleTime = 0;
+let cycleCount = 0;
+let fps_rate = '...';
+
+// screen
+const WIDTH = 300, HALF_WIDTH = 150;
+const HEIGHT = 200, HALF_HEIGHT = 100;
+
+// Game loop
+function gameLoop() {
+    // Calculate FPS
+    cycleCount++;
+    if (cycleCount >= 60) cycleCount = 0;
+    const startTime = Date.now();
+    const cycleTime = startTime - oldCycleTime;
+    oldCycleTime = startTime;
+    if (cycleCount % 60 === 0) fps_rate = Math.floor(1000 / cycleTime);
+    
+    // Resize canvas to 30% of the viewport's width and height
+    canvas.width = window.innerWidth * 0.3;
+    canvas.height = window.innerHeight * 0.3;
+    
+    // Update screen
+    context.fillStyle = 'black';
+    context.fillRect(0, 0, canvas.width, canvas.height);    
+    context.fillStyle = 'white';
+    context.fillRect(canvas.width / 2 - HALF_WIDTH, canvas.height / 2 - HALF_HEIGHT, WIDTH, HEIGHT);
+    
+    // Infinite loop
+    setTimeout(gameLoop, cycleDelay);
+    
+    // Render FPS to screen
+    context.fillStyle = 'white';
+    context.font = '10px Monospace';
+    context.fillText('FPS: ' + fps_rate, 0, 20);
+}
 window.onload = function() {
   let viewWidth = $("#view").width();
   let viewHeight = $("#view").height();
