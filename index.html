@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Set character encoding -->
   <meta charset="UTF-8">
+  <!-- Define rendering mode for Internet Explorer -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maze</title>
+  <!-- Linking our external stylesheet maze.css -->
   <link rel="stylesheet" href="./maze.css">
 </head>
 <body>
@@ -12,17 +15,23 @@
   <div id="page">
 
     <div id="Message-Container">
+      <!-- Message container for displaying completion message -->
       <div id="message">
         <h1>Congratulations!</h1>
+        <!-- completion message-->
         <p>You win!!!.</p>
+        <!-- Display number of moves -->
         <p id="moves"></p>
+        <!-- Button to close the massage and start again  -->
         <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Done!" />
       </div>
     </div>
 
     <br>
+    <!-- Menu for selecting difficulty and starting maze -->
     <div id="menu">
       <div class="custom-select">
+        <!-- Dropdown menu for selecting different modes-->
         <select id="diffSelect">
                   <option value="10">Easy</option>
                   <option value="15">Medium</option>
@@ -30,22 +39,26 @@
                   <option value="38">Extreme</option>                                      
               </select>
       </div>
+      <!-- Button to start maze generation-->
       <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start" />
     </div>
 
     <div id="view">
+      <!-- Container for displaying maze -->
       <div id="mazeContainer">
+        <!-- Canvas element for drawing maze -->
         <canvas id="mazeCanvas" class="border" height="1100" width="1100"></canvas>
       </div>
     </div>
-
+    <!-- instructions on how to play the game -->
     <p id="instructions">Use arrow keys to move the avatars to the flag!</p>
 
   </div>
-  
+  <!-- Link to jquery library -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Link to touch swipe library, javascript shortcut for screens -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
-  
+  <!-- script for maze generation and interaction -->
   <script src="./maze.js"></script>
 </body>
 </html>
