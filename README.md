@@ -52,4 +52,4 @@ Annacletter Mafema
 Luleko Mkhize
 
 ## Licence
-MTI Licence
+MIT Licence
