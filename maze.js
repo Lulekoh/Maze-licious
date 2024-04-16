@@ -1,7 +1,9 @@
+// Define a function to generate a random number within a specified range
 function rand(max) {
   return Math.floor(Math.random() * max);
 }
 
+// Define a function to shuffle an array
 function shuffle(a) {
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -17,8 +19,10 @@ function changeBrightness(factor, sprite) {
   var context = virtCanvas.getContext("2d");
   context.drawImage(sprite, 0, 0, 500, 500);
 
+// Get the image data
   var imgData = context.getImageData(0, 0, 500, 500);
 
+// Adjust the brightness of each pixel in the image data
   for (let i = 0; i < imgData.data.length; i += 4) {
     imgData.data[i] = imgData.data[i] * factor;
     imgData.data[i + 1] = imgData.data[i + 1] * factor;
@@ -26,6 +30,7 @@ function changeBrightness(factor, sprite) {
   }
   context.putImageData(imgData, 0, 0);
 
+// Create a new image element with the modified image data
   var spriteOutput = new Image();
   spriteOutput.src = virtCanvas.toDataURL();
   virtCanvas.remove();
@@ -45,6 +50,7 @@ function toggleVisablity(id) {
   }
 }
 
+// Define a constructor function for generating a maze
 function Maze(Width, Height) {
   var mazeMap;
   var width = Width;
@@ -551,6 +557,7 @@ window.onload = function() {
   
 };
 
+// Handle resizing of the window
 window.onresize = function() {
   let viewWidth = $("#view").width();
   let viewHeight = $("#view").height();
@@ -573,6 +580,7 @@ function makeMaze() {
     player.unbindKeyDown();
     player = null;
   }
+// Initialize variables and set up the maze
   var e = document.getElementById("diffSelect");
   difficulty = e.options[e.selectedIndex].value;
   cellSize = mazeCanvas.width / difficulty;
