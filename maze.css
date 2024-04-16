@@ -1,9 +1,6 @@
-/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-/* Resetting default styles and setting up base styles */
 html, body {
-    /* Fixed positioning to cover the entire viewport */
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -13,111 +10,65 @@ html, body {
     bottom: 0;
     left: 0;
     right: 0;
-    /* Setting background color */
     background-color: #ebf;
-    /* Using Poppins font */
     font-family: 'Poppins', sans-serif;
 }
 
-/* Styling for the main view container */
 #view {
-    /* Adding margin to the top */
     margin-top: 30px;
 }
 
-/* Styling for the maze container */
 #mazeContainer {
-    /* Positioning from the top */
     top: 15px;
-    /* Initially hiding the maze container */
     opacity: 0;
-    /* Displaying as inline-block */
     display: inline-block;
-    /* Centering horizontally */
     margin: auto;
-    /* Adding border radius */
     border-radius: 10px;
 }
-
-/* Styling for the maze canvas */
 #mazeContainer #mazeCanvas {
     margin: 0;
     display: block;
-    /* Adding a green border */
     border: solid 2px green;
-    /* Setting height */
     height: 400px;
 }
-
-/* Styling for input and select elements */
 input, select {
-    /* Setting cursor */
     cursor: pointer;
-    /* Setting background color */
     background-color: rgba(0, 0, 0, 0.30);
-    /* Setting height */
     height: 45px;
-    /* Setting width */
     width: 150px;
-    /* Adding padding */
     padding: 10px;
-    /* Removing border */
     border: none;
-    /* Adding border radius */
     border-radius: 5px;
-    /* Setting text color */
     color: white;
-    /* Displaying as inline-block */
     display: inline-block;
-    /* Setting font size */
     font-size: 15px;
-    /* Centering text */
     text-align: center;
-    /* Removing default appearance */
+    text-decoration: none;
     appearance: none;
 }
-
-/* Hover state for input and select elements */
 input:hover, select:hover {
-    /* Darkening background on hover */
-    background-color: rgba(0, 0, 0, 0.70);
+	background-color: rgba(0, 0, 0, 0.70);
 }
-
-/* Active state for input and select elements */
 input:active, select:active {
-    /* Setting background color to orange on click */
-    background-color: orange;
+	background-color: orange;
 }
-
-/* Focus state for input and select elements */
 input:focus, select:focus {
-    /* Removing outline on focus */
-    outline: none;
+	outline: none;
 }
-
-/* Styling for custom select */
 .custom-select {
-    /* Displaying as inline-block */
-    display: inline-block;
+	display: inline-block;
 }
-
-/* Styling for select element inside custom select */
 .custom-select select {
-    /* Removing default appearance */
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    /* Setting background position */
+    background-repeat: no-repeat;
     background-position: 125px center;
 }
-
-/* Styling for message container */
 #Message-Container {
-    /* Initially hiding the message container */
     visibility: hidden;
-    /* Setting text color */
     color: white;
-    /* Setting width and height */
+    display: block;
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -125,86 +76,57 @@ input:focus, select:focus {
     left: 0;
     bottom: 0;
     right: 0;
-    /* Setting background color */
     background-color: rgba(0, 0, 0, 0.30);
-    /* Setting z-index */
     z-index: 1;
 }
-
-/* Styling for message inside message container */
 #Message-Container #message {
-    /* Setting width and height */
     width: 300px;
     height: 300px;
     position: fixed;
-    /* Centering vertically */
     top: 50%;
-    /* Centering horizontally */
     left: 50%;
-    /* Adjusting for half of width */
     margin-left: -150px;
-    /* Adjusting for half of height */
     margin-top: -150px;
 }
-
-/* Styling for main page */
 #page {
-    /* Centering text */
-    text-align: center;
-    height: auto;
-    width: auto;
-    /* Centering horizontally */
-    margin: auto;
+	text-align: center;
+	height: auto;
+	width: auto;
+	margin: auto;
 }
-
-/* Styling for menu */
 #page #menu {
-    /* Centering horizontally */
     margin: auto;
-    /* Adding padding */
     padding: 10px;
-    /* Setting height */
     height: 65px;
-    /* Including padding and border in the element's total width and height */
     box-sizing: border-box;
 }
-
-/* Styling for heading inside menu */
 #page #menu h1 {
     margin: 0;
-    /* Adding bottom margin */
     margin-bottom: 10px;
-    /* Setting font weight */
     font-weight: 600;
-    /* Setting font size */
     font-size: 3.2rem;
 }
-
-/* Styling for view inside page */
 #page #view {
     position: absolute;
-    /* Positioning below the menu */
     top: 65px;
     bottom: 0;
     left: 0;
     right: 0;
-    /* Setting width */
     width: 100%;
     height: auto;
 }
-
-/* Styling for border class */
 .border {
-    /* Adding black border */
     border: 10px black solid;
-    /* Adding border radius */
     border-radius: 10px;
 }
 
-/* Media query for extra small devices (phones, 600px and down) */
+#instructions {
+    margin-top: 425px;
+}
+ 
+/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 400px) {
-    input, select {
-        /* Adjusting width for smaller screens */
-        width: 120px;
-    }
+	input, select {
+	    width: 120px;
+	}
 }
