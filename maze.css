@@ -3,6 +3,7 @@
 
 /* Resetting default styles and setting up base styles */
 html, body {
+    /* Fixed positioning to cover the entire viewport */
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -12,149 +13,198 @@ html, body {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #ebf; /* Setting background color */
-    font-family: 'Poppins', sans-serif; /* Using Poppins font */
+    /* Setting background color */
+    background-color: #ebf;
+    /* Using Poppins font */
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Styling for the main view container */
 #view {
-    margin-top: 30px; /* Adding margin to the top */
+    /* Adding margin to the top */
+    margin-top: 30px;
 }
 
 /* Styling for the maze container */
 #mazeContainer {
-    top: 15px; /* Positioning from the top */
-    opacity: 0; /* Initially hiding the maze container */
-    display: inline-block; /* Displaying as inline-block */
-    margin: auto; /* Centering horizontally */
-    border-radius: 10px; /* Adding border radius */
+    /* Positioning from the top */
+    top: 15px;
+    /* Initially hiding the maze container */
+    opacity: 0;
+    /* Displaying as inline-block */
+    display: inline-block;
+    /* Centering horizontally */
+    margin: auto;
+    /* Adding border radius */
+    border-radius: 10px;
 }
 
 /* Styling for the maze canvas */
 #mazeContainer #mazeCanvas {
     margin: 0;
     display: block;
-    border: solid 2px green; /* Adding a green border */
-    height: 400px; /* Setting height */
+    /* Adding a green border */
+    border: solid 2px green;
+    /* Setting height */
+    height: 400px;
 }
 
 /* Styling for input and select elements */
 input, select {
+    /* Setting cursor */
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.30); /* Setting background color */
-    height: 45px; /* Setting height */
-    width: 150px; /* Setting width */
-    padding: 10px; /* Adding padding */
-    border: none; /* Removing border */
-    border-radius: 5px; /* Adding border radius */
-    color: white; /* Setting text color */
+    /* Setting background color */
+    background-color: rgba(0, 0, 0, 0.30);
+    /* Setting height */
+    height: 45px;
+    /* Setting width */
+    width: 150px;
+    /* Adding padding */
+    padding: 10px;
+    /* Removing border */
+    border: none;
+    /* Adding border radius */
+    border-radius: 5px;
+    /* Setting text color */
+    color: white;
+    /* Displaying as inline-block */
     display: inline-block;
-    font-size: 15px; /* Setting font size */
-    text-align: center; /* Centering text */
-    text-decoration: none;
-    appearance: none; /* Removing default appearance */
+    /* Setting font size */
+    font-size: 15px;
+    /* Centering text */
+    text-align: center;
+    /* Removing default appearance */
+    appearance: none;
 }
 
 /* Hover state for input and select elements */
 input:hover, select:hover {
-    background-color: rgba(0, 0, 0, 0.70); /* Darkening background on hover */
+    /* Darkening background on hover */
+    background-color: rgba(0, 0, 0, 0.70);
 }
 
 /* Active state for input and select elements */
 input:active, select:active {
-    background-color: orange; /* Setting background color to orange on click */
+    /* Setting background color to orange on click */
+    background-color: orange;
 }
 
 /* Focus state for input and select elements */
 input:focus, select:focus {
-    outline: none; /* Removing outline on focus */
+    /* Removing outline on focus */
+    outline: none;
 }
 
 /* Styling for custom select */
 .custom-select {
+    /* Displaying as inline-block */
     display: inline-block;
 }
 
 /* Styling for select element inside custom select */
 .custom-select select {
+    /* Removing default appearance */
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-repeat: no-repeat;
+    /* Setting background position */
     background-position: 125px center;
 }
 
 /* Styling for message container */
 #Message-Container {
-    visibility: hidden; /* Initially hiding the message container */
-    color: white; /* Setting text color */
-    display: block;
-    width: 100vw; /* Setting width */
-    height: 100vh; /* Setting height */
+    /* Initially hiding the message container */
+    visibility: hidden;
+    /* Setting text color */
+    color: white;
+    /* Setting width and height */
+    width: 100vw;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.30); /* Setting background color */
-    z-index: 1; /* Setting z-index */
+    /* Setting background color */
+    background-color: rgba(0, 0, 0, 0.30);
+    /* Setting z-index */
+    z-index: 1;
 }
 
 /* Styling for message inside message container */
 #Message-Container #message {
-    width: 300px; /* Setting width */
-    height: 300px; /* Setting height */
+    /* Setting width and height */
+    width: 300px;
+    height: 300px;
     position: fixed;
-    top: 50%; /* Centering vertically */
-    left: 50%; /* Centering horizontally */
-    margin-left: -150px; /* Adjusting for half of width */
-    margin-top: -150px; /* Adjusting for half of height */
+    /* Centering vertically */
+    top: 50%;
+    /* Centering horizontally */
+    left: 50%;
+    /* Adjusting for half of width */
+    margin-left: -150px;
+    /* Adjusting for half of height */
+    margin-top: -150px;
 }
 
 /* Styling for main page */
 #page {
-    text-align: center; /* Centering text */
+    /* Centering text */
+    text-align: center;
     height: auto;
     width: auto;
-    margin: auto; /* Centering horizontally */
+    /* Centering horizontally */
+    margin: auto;
 }
 
 /* Styling for menu */
 #page #menu {
-    margin: auto; /* Centering horizontally */
-    padding: 10px; /* Adding padding */
-    height: 65px; /* Setting height */
-    box-sizing: border-box; /* Including padding and border in the element's total width and height */
+    /* Centering horizontally */
+    margin: auto;
+    /* Adding padding */
+    padding: 10px;
+    /* Setting height */
+    height: 65px;
+    /* Including padding and border in the element's total width and height */
+    box-sizing: border-box;
 }
 
 /* Styling for heading inside menu */
 #page #menu h1 {
     margin: 0;
-    margin-bottom: 10px; /* Adding bottom margin */
-    font-weight: 600; /* Setting font weight */
-    font-size: 3.2rem; /* Setting font size */
+    /* Adding bottom margin */
+    margin-bottom: 10px;
+    /* Setting font weight */
+    font-weight: 600;
+    /* Setting font size */
+    font-size: 3.2rem;
 }
 
 /* Styling for view inside page */
 #page #view {
     position: absolute;
-    top: 65px; /* Positioning below the menu */
+    /* Positioning below the menu */
+    top: 65px;
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100%; /* Setting width */
+    /* Setting width */
+    width: 100%;
     height: auto;
 }
 
 /* Styling for border class */
 .border {
-    border: 10px black solid; /* Adding black border */
-    border-radius: 10px; /* Adding border radius */
+    /* Adding black border */
+    border: 10px black solid;
+    /* Adding border radius */
+    border-radius: 10px;
 }
 
 /* Media query for extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 400px) {
     input, select {
-        width: 120px; /* Adjusting width for smaller screens */
+        /* Adjusting width for smaller screens */
+        width: 120px;
     }
 }
