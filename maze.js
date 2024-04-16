@@ -26,9 +26,9 @@ function changeBrightness(factor, sprite) {
 
   // Adjust the brightness of each pixel in the image data
   for (let i = 0; i < imgData.data.length; i += 4) {
-    imgData.data[i] = imgData.data[i] * factor;
-    imgData.data[i + 1] = imgData.data[i + 1] * factor;
-    imgData.data[i + 2] = imgData.data[i + 2] * factor;
+    imgData.data[i] *= factor;
+    imgData.data[i + 1] *= factor;
+    imgData.data[i + 2] *= factor;
   }
 
   // Put the modified image data back onto the canvas
@@ -44,30 +44,27 @@ function changeBrightness(factor, sprite) {
 // Define a function to display a victory message
 function displayVictoryMess(moves) {
   document.getElementById("moves").innerHTML = "You Moved " + moves + " Steps.";
-  toggleVisablity("Message-Container");  
+  toggleVisibility("Message-Container");
 }
 
 // Define a function to toggle the visibility of an element
-function toggleVisablity(id) {
-  if (document.getElementById(id).style.visibility == "visible") {
-    document.getElementById(id).style.visibility = "hidden";
-  } else {
-    document.getElementById(id).style.visibility = "visible";
-  }
+function toggleVisibility(id) {
+  var element = document.getElementById(id);
+  element.style.visibility = element.style.visibility === "visible" ? "hidden" : "visible";
 }
 
 // Define a constructor function for generating a maze
-function Maze(Width, Height) {
+function Maze(width, height) {
   // Maze properties and methods...
 }
 
 // Define a function to draw a maze on a canvas
-function DrawMaze(Maze, ctx, cellsize, endSprite = null) {
+function DrawMaze(maze, ctx, cellSize, endSprite = null) {
   // Drawing functions and methods...
 }
 
 // Define a constructor function for a player object
-function Player(maze, c, _cellsize, onComplete, sprite = null) {
+function Player(maze, ctx, cellSize, onComplete, sprite = null) {
   // Player properties and methods...
 }
 
