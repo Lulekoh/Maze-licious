@@ -1,5 +1,8 @@
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+/* Resetting default styles and setting up base styles */
+/* Fixed positioning to cover the entire viewport */
 html, body {
     width: 100vw;
     height: 100vh;
@@ -14,10 +17,12 @@ html, body {
     font-family: 'Poppins', sans-serif;
 }
 
+/* Styling for the main view container */
 #view {
     margin-top: 30px;
 }
 
+/* Styling for the maze container */
 #mazeContainer {
     top: 15px;
     opacity: 0;
@@ -25,12 +30,14 @@ html, body {
     margin: auto;
     border-radius: 10px;
 }
+/* Styling for the maze canvas */
 #mazeContainer #mazeCanvas {
     margin: 0;
     display: block;
     border: solid 2px black;
     height: 400px;
 }
+/* Styling for input and select elements */
 input, select {
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.30);
@@ -46,6 +53,7 @@ input, select {
     text-decoration: none;
     appearance: none;
 }
+/* Hover state for input and select elements */
 input:hover, select:hover {
 	background-color: rgba(0, 0, 0, 0.70);
 }
@@ -58,6 +66,7 @@ input:focus, select:focus {
 .custom-select {
 	display: inline-block;
 }
+/* Styling for select element inside custom select */
 .custom-select select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -88,6 +97,7 @@ input:focus, select:focus {
     margin-left: -150px;
     margin-top: -150px;
 }
+/* Main page */
 #page {
 	text-align: center;
 	height: auto;
@@ -100,6 +110,7 @@ input:focus, select:focus {
     height: 65px;
     box-sizing: border-box;
 }
+/* Heading inside menu */
 #page #menu h1 {
     margin: 0;
     margin-bottom: 10px;
@@ -115,6 +126,7 @@ input:focus, select:focus {
     width: 100%;
     height: auto;
 }
+/* Border class */
 .border {
     border: 10px black solid;
     border-radius: 10px;
